@@ -1,64 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi CV Profesional</title>
-    <style>
-        body {
-            background: linear-gradient(to bottom left, #ff9999, #fff2cc);
-            background-attachment: fixed;
-            font-family: sans-serif;
-            color: #333333;
-            }
-    </style>
+    <link rel="icon" type="image/png" href="imagenes/favicon.png?v=2">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header> 
         <h1>JUAN BAUTISTA GIL COSEGLIA</h1>
-        <p><em>Estudiante y entusiasta de la Tecnologia</em></p>
+        <p><em><i class="fa-solid fa-robot"></i>Estudiante y entusiasta de la Tecnologia</em></p>
     </header>
-<hr>
-<section>
-    <img src="imagenes/fotoCV.jpg" alt="Foto de perfil del CV" width="250">
-</section> 
-<hr> <section>
-    <h3>Datos Personales</h3>
-    <ul>
+    <hr>
+    <div class="contenedor-perfil">
+        <div class="caja-foto">
+            <img src="imagenes/fotoCV.jpg" alt="Foto de perfil del CV" width="250">
+    </div>
+    <div class="caja-menu-stark">
+        <a href="#datos-personales" class="boton-stark"><i class="fa-solid fa-address-book"></i> DATOS PERSONALES</a>
+        <a href="#galeria" class="boton-stark"><i class="fa-solid fa-images"></i> GALERIA MULTIMEDIA</a>
+        <a href="#series-peliculas" class="boton-stark"><i class="fa-solid fa-tv"></i> SERIES Y PELICULAS</a>
+        <a href="#contacto" class="boton-stark"><i class="fa-solid fa-envelope"></i> CONTACTO</a>
+        </div>
+    </div>
+    <hr>
+<section id="datos-personales">
+    <h3>Datos Personales <i class="fa-solid fa-address-book"></i></h3>
+    <ul class="columnas-stark">
         <li><strong>Edad:</strong> 23 años</li>
         <li><strong>Ubicacion:</strong>Buenos Aires, Argentina</li>
         <li><strong>Modalidad de trabajo:</strong>Remoto, Home Office</li>
     </ul>
 </section>
 <hr>
-<section>
-    <h3>Galeria Multimedia</h3>
+<section id="galeria">
+    <h3>Galeria Multimedia <i class="fa-solid fa-images"></i></h3>
+    <div class="grilla-stark">
+    <div class="tarjeta-galeria">
     <p><strong>Foto de Perfil:</strong></p>
     <img src="imagenes/Fotocv3.jpg.avif" alt="Segunda Foto de Perfil" width="250">
-    <br><br>
+</div>
+<div class="tarjeta-galeria">
     <p><strong>Video Destacado:</strong></p>
-    <a href="https://www.youtube.com/watch?v=7XeqlN2PBBY" target="_blank" style="text-decoration: none; color: inherit;">
+    <a href="https://www.youtube.com/watch?v=7XeqlN2PBBY" target="_blank" data-tooltip="Se abrira una pestaña de Youtube" style="text-decoration: none; color: inherit;">
     <img src="imagenes/portadavideo.png" alt="Miniatura del Video" width="560" style="display: block; margin-bottom: 8px;">
     <strong> Click ACA para mirar el video</strong>
     </a>
+</div>
+
+</div> 
 </section>
 <hr>
-<section>
-    <h3>Series Favoritas</h3>
-    <ul>
+<section id="series-peliculas">
+    <h3>Series Favoritas <i class="fa-solid fa-tv"></i></h3>
+    <ul class="columnas-stark">
         <li>Euphoria</li>
         <li>Peaky Blinders</li>
         <li>The Punisher</li>
     </ul>
-    <h3>Peliculas Favoritas</h3>
-    <ol>
+    <h3>Peliculas Favoritas <i class="fa-solid fa-film"></i></h3>
+    <ol class="columnas-stark">
         <li>Blade Runner 2049</li>
         <li>Tron: Legacy</li>
         <li>Tron: Ares</li>
     </ol>
 </section>
-<section>
-    <h3>Contacto</h3>
+<section id="contacto">
+    <h3>Contacto <i class="fa-solid fa-envelope"></i></h3>
     <form action="#" method="post">
     <label for="nombre">Nombre:</label><br>
     <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
@@ -66,7 +79,7 @@
     <label for="mensaje">Mensaje</label><br>
     <textarea id="mensaje" name="mensaje" rows="4" cols="40" placeholder="Escribi tu mensaje ACA" required></textarea>
     <br> <br>
-    <button type="submit">Enviar Mensaje</button>
+    <button type="submit" data-tooltip="Enviar mensaje a Industrias Stark">Enviar Mensaje</button>
 
     </form>
 </section>
